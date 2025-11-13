@@ -1,30 +1,32 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Profile {
-  id: number
-  name: string
-  role: string
-  image: string
-  bio: string
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
 }
 
 interface ProfileSliderProps {
-  profiles: Profile[]
+  profiles: Profile[];
 }
 
 export function ProfileSlider({ profiles }: ProfileSliderProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Duplicate profiles to create a seamless loop
-  const duplicatedProfiles = [...profiles, ...profiles]
+  const duplicatedProfiles = [...profiles, ...profiles];
 
   return (
     <div className="w-full overflow-hidden py-8 bg-gradient-to-r from-green-50 to-green-100">
-      <h3 className="text-2xl font-bold text-center mb-6 text-primary">Our Team</h3>
+      <h3 className="text-2xl font-bold text-center mb-6 text-primary">
+        Our TeamS
+      </h3>
       <div ref={containerRef} className="relative">
         <motion.div
           className="flex"
@@ -50,12 +52,21 @@ export function ProfileSlider({ profiles }: ProfileSliderProps) {
                 }}
               >
                 <div className="h-48 relative">
-                  <Image src={profile.image || "/placeholder.svg"} alt={profile.name} fill className="object-cover" />
+                  <Image
+                    src={profile.image || "/placeholder.svg"}
+                    alt={profile.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-bold text-lg text-primary">{profile.name}</h4>
+                  <h4 className="font-bold text-lg text-primary">
+                    {profile.name}
+                  </h4>
                   <p className="text-green-700 font-medium">{profile.role}</p>
-                  <p className="text-sm text-green-600 mt-2 line-clamp-3">{profile.bio}</p>
+                  <p className="text-sm text-green-600 mt-2 line-clamp-3">
+                    {profile.bio}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -63,5 +74,5 @@ export function ProfileSlider({ profiles }: ProfileSliderProps) {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
