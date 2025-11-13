@@ -25,7 +25,7 @@ export function ProfileSlider({ profiles }: ProfileSliderProps) {
   return (
     <div className="w-full overflow-hidden py-8 bg-gradient-to-r from-green-50 to-green-100">
       <h3 className="text-2xl font-bold text-center mb-6 text-primary">
-        Our TeamS
+        Our Team
       </h3>
       <div ref={containerRef} className="relative">
         <motion.div
