@@ -3,7 +3,7 @@ name: Deploy to cPanel via FTP
 on:
   push:
     branches:
-      - main  # or your main branch
+      - main # or your main branch
 
 jobs:
   deploy:
@@ -18,5 +18,3 @@ jobs:
           server: sharia.rawdatun.org
           username: rawdatun@sharia.rawdatun.org
           password: Ci~v;Yl0p;bs~_%O
-          server-dir: /home/oandalev/sharia.rawdatun.org/
-          local-dir: ./   # folder containing your code
