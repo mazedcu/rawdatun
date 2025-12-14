@@ -53,14 +53,8 @@ const profiles = [
     role: "Arabic Langjuage Adviser",
     image: "/placeholder.svg?height=400&width=400",
     bio: "He has been working with different madrasa and English Medium schools and teaching students arabic and also a Teacher's trainer",
-  },
-  {
-    id: 4,
-    name: "Hasan Kibria",
-    role: "English language Adviser",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "He did CELTA and DELTA and is an expert in his field",
-  },
+  }
+  
 ]
 
 export default function Home() {
