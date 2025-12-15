@@ -59,7 +59,7 @@ const profiles = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-green-50">
+    <><div className="flex flex-col min-h-screen bg-green-50">
       <header className="sticky top-0 z-40 w-full border-b bg-white border-green-100">
         <div className="container flex h-20 items-center justify-between py-4">
           <div className="flex items-center gap-3">
@@ -175,8 +175,7 @@ export default function Home() {
                   alt="Students learning"
                   width={550}
                   height={550}
-                  className="relative z-10 rounded-2xl object-cover shadow-lg border-4 border-white"
-                />
+                  className="relative z-10 rounded-2xl object-cover shadow-lg border-4 border-white" />
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-green-100">
                   <div className="flex items-center gap-2">
                     <GraduationCap className="h-5 w-5 text-primary" />
@@ -379,7 +378,7 @@ export default function Home() {
                     </div>
                     <p className="text-sm text-green-700">
                       This is the language of Quran and this single fact is enough to make it necessary knowledge of
-                      Islam.
+                      Islam. We follow Stephen Krahen's second language acquisition model to teach Arabic in an effective way.
                     </p>
                   </CardContent>
                   <CardFooter>
@@ -392,6 +391,8 @@ export default function Home() {
                     </Button>
                   </CardFooter>
                 </Card>
+
+
               </motion.div>
               <motion.div variants={fadeIn} whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
                 <Card className="h-full border-green-200 hover:border-primary transition-colors duration-300 bg-white">
@@ -424,305 +425,333 @@ export default function Home() {
                 </Card>
               </motion.div>
             </motion.div>
-          </div>
-        </motion.section>
 
-        {/* H5P Content Section */}
-        <motion.section
-          id="h5p-content"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-        >
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Interactive Learning</h2>
-                <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Engage with our interactive content designed to enhance your learning experience.
-                </p>
-              </div>
-            </div>
-            <motion.div className="mx-auto max-w-5xl py-12" variants={fadeIn}>
-              <Tabs defaultValue="quran" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 bg-green-100">
-                  <TabsTrigger value="quran" className="data-[state=active]:bg-primary data-[state=active]:text-white">
-                    Mathematics
-                  </TabsTrigger>
-                  <TabsTrigger value="arabic" className="data-[state=active]:bg-primary data-[state=active]:text-white">
-                    Arabic
-                  </TabsTrigger>
-                </TabsList>
-                <TabsContent value="quran" className="p-4 border rounded-lg mt-4 border-green-200">
-                  <motion.div
-                    className="aspect-video bg-green-50 rounded-lg flex items-center justify-center"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="text-center p-6">
-                      <h3 className="text-xl font-bold mb-2 text-primary">Mathematics Interactive Content</h3>
-                      <p className="text-green-700 mb-4">Interactive Math exercises</p>
-                      <div className="bg-white p-8 rounded-lg border border-green-200">
-                        <H5PEmbed
-                          src="https://campus.rawdatun.org/h5p/embed.php?url=https%3A%2F%2Fcampus.rawdatun.org%2Fpluginfile.php%2F312%2Fmod_h5pactivity%2Fpackage%2F0%2Faddition-4.h5p&component=mod_h5pactivity"
-                          title="Quran Interactive Content"
-                          height={500}
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
-                </TabsContent>
-                <TabsContent value="arabic" className="p-4 border rounded-lg mt-4 border-green-200">
-                  <motion.div
-                    className="aspect-video bg-green-50 rounded-lg flex items-center justify-center"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="text-center p-6">
-                      <h3 className="text-xl font-bold mb-2 text-primary">Arabic Language Interactive Content</h3>
-                      <p className="text-green-700 mb-4">
-                        Interactive Arabic vocabulary builders, grammar exercises, and conversation practice.
-                      </p>
-                      <div className="bg-white p-8 rounded-lg border border-green-200">
-                        <H5PEmbed
-                          src="https://campus.rawdatun.org/h5p/embed.php?url=https%3A%2F%2Fcampus.rawdatun.org%2Fpluginfile.php%2F312%2Fmod_h5pactivity%2Fpackage%2F0%2Faddition-4.h5p&component=mod_h5pactivity"
-                          title="Arabic Interactive Content"
-                          height={500}
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
-                </TabsContent>
-              </Tabs>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* Admission Form Section with Google Form */}
-        <motion.section
-          id="admission"
-          className="w-full py-12 md:py-24 lg:py-32 bg-green-50"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-        >
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Apply for Admission</h2>
-                <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join our online madrasa and begin your journey of Islamic learning. Fill out the form below to apply.
-                </p>
-              </div>
-            </div>
-            <motion.div className="mx-auto max-w-3xl py-12" variants={fadeIn}>
-              {/* Google Form Embed */}
-              <GoogleFormEmbed
-                formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeZnuTOEcXJDX4Fs0V9oZk0u7T3bWh8Wjqjz0dLudAdACHaGA/viewform?usp=sf_link"
-                title="Rawdatun Academy Admission Form"
-                height={800}
-                className="shadow-lg"
-              />
-
-              {/* Additional information card */}
-              <Card className="mt-8 border-green-200 bg-white">
-                <CardHeader className="bg-green-50 border-b border-green-100">
-                  <CardTitle className="text-primary">Application Process</CardTitle>
+            <motion.div variants={fadeIn} whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
+              <Card className="h-full border-green-200 hover:border-primary transition-colors duration-300 bg-white">
+                <CardHeader className="bg-green-50 rounded-t-lg">
+                  <CardTitle className="text-primary">Phonics</CardTitle>
                   <CardDescription className="text-green-700">
-                    What happens after you submit your application
+                    Learn coding and engineering principles{" "}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6 space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
-                      <span className="text-primary font-bold">1</span>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-green-800">Application Review</h4>
-                      <p className="text-sm text-green-700">
-                        Our admissions team will review your application within 3-5 business days.
-                      </p>
-                    </div>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <span className="text-sm text-green-700">.....</span>
                   </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
-                      <span className="text-primary font-bold">2</span>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-green-800">Placement Assessment</h4>
-                      <p className="text-sm text-green-700">
-                        You'll be invited to a brief online assessment to determine your current knowledge level.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
-                      <span className="text-primary font-bold">3</span>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-green-800">Enrollment Confirmation</h4>
-                      <p className="text-sm text-green-700">
-                        Upon acceptance, you'll receive enrollment details and access to our learning platform.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter className="bg-green-50 border-t border-green-100">
                   <p className="text-sm text-green-700">
-                    For any questions about the application process, please contact our admissions team at{" "}
-                    <a href="mailto:admissions@rawdatun.org" className="text-primary font-medium hover:underline">
-                      admissions@rawdatun.org
-                    </a>
+                    Our program for phonics is called Phonics for Muslim children . It is a method where try to teach phonics within the boundary of sharia.
                   </p>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* Contact Section */}
-        <motion.section
-          id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-        >
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Contact Us</h2>
-                <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Have questions? We're here to help. Reach out to us through any of the following channels.
-                </p>
-              </div>
-            </div>
-            <motion.div className="mx-auto max-w-3xl py-12" variants={fadeIn}>
-              <Card className="border-green-200 hover:border-primary transition-colors duration-300 bg-white">
-                <CardHeader className="bg-green-50 border-b border-green-100">
-                  <CardTitle className="text-primary">Get in Touch</CardTitle>
-                  <CardDescription className="text-green-700">We'd love to hear from you</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6 pt-6">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <h3 className="font-medium text-green-800">Address</h3>
-                      <p className="text-sm text-green-700">Dhaka</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Clock className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <h3 className="font-medium text-green-800">Office Hours</h3>
-                      <p className="text-sm text-green-700">Saturday - Thursday: 9:00 AM - 5:00 PM</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Users className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <h3 className="font-medium text-green-800">Support</h3>
-                      <p className="text-sm text-green-700">Email: support@rawdatun.org</p>
-                      <p className="text-sm text-green-700">Phone: +8801676885195</p>
-                    </div>
-                  </div>
-                  <div className="pt-4">
-                    <h3 className="font-medium mb-2 text-green-800">Follow Us</h3>
-                    <div className="flex space-x-4">
-                      <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="rounded-full border-green-300 text-primary hover:bg-green-50"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="h-4 w-4 text-primary"
-                          >
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                          </svg>
-                          <span className="sr-only">Facebook</span>
-                        </Button>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="rounded-full border-green-300 text-primary hover:bg-green-50"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="h-4 w-4 text-primary"
-                          >
-                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                          </svg>
-                          <span className="sr-only">Twitter</span>
-                        </Button>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="rounded-full border-green-300 text-primary hover:bg-green-50"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="h-4 w-4 text-primary"
-                          >
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                          </svg>
-                          <span className="sr-only">Instagram</span>
-                        </Button>
-                      </motion.div>
-                    </div>
-                  </div>
                 </CardContent>
-                <CardFooter className="bg-green-50 border-t border-green-100">
-                  <motion.div className="w-full" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                    <Button className="w-full bg-primary hover:bg-green-700" asChild>
-                      <a href="mailto:support@rawdatun.org">Email Us</a>
-                    </Button>
-                  </motion.div>
+                <CardFooter>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-green-500 text-green-700 hover:bg-green-50"
+                  >
+                    <Link href="#admission">Enroll Now</Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </motion.div>
-          </div>
-        </motion.section>
-      </main>
+         
 
-      <footer className="w-full border-t bg-white border-green-100">
+
+
+        </div>
+      </motion.section>
+
+      {/* H5P Content Section */}
+      <motion.section
+        id="h5p-content"
+        className="w-full py-12 md:py-24 lg:py-32 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Interactive Learning</h2>
+              <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Engage with our interactive content designed to enhance your learning experience.
+              </p>
+            </div>
+          </div>
+          <motion.div className="mx-auto max-w-5xl py-12" variants={fadeIn}>
+            <Tabs defaultValue="quran" className="w-full">
+              <TabsList className="grid w-full grid-cols-2 bg-green-100">
+                <TabsTrigger value="quran" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+                  Mathematics
+                </TabsTrigger>
+                <TabsTrigger value="arabic" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+                  Arabic
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="quran" className="p-4 border rounded-lg mt-4 border-green-200">
+                <motion.div
+                  className="aspect-video bg-green-50 rounded-lg flex items-center justify-center"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="text-center p-6">
+                    <h3 className="text-xl font-bold mb-2 text-primary">Mathematics Interactive Content</h3>
+                    <p className="text-green-700 mb-4">Interactive Math exercises</p>
+                    <div className="bg-white p-8 rounded-lg border border-green-200">
+                      <H5PEmbed
+                        src="https://campus.rawdatun.org/h5p/embed.php?url=https%3A%2F%2Fcampus.rawdatun.org%2Fpluginfile.php%2F312%2Fmod_h5pactivity%2Fpackage%2F0%2Faddition-4.h5p&component=mod_h5pactivity"
+                        title="Quran Interactive Content"
+                        height={500} />
+                    </div>
+                  </div>
+                </motion.div>
+              </TabsContent>
+              <TabsContent value="arabic" className="p-4 border rounded-lg mt-4 border-green-200">
+                <motion.div
+                  className="aspect-video bg-green-50 rounded-lg flex items-center justify-center"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="text-center p-6">
+                    <h3 className="text-xl font-bold mb-2 text-primary">Arabic Language Interactive Content</h3>
+                    <p className="text-green-700 mb-4">
+                      Interactive Arabic vocabulary builders, grammar exercises, and conversation practice.
+                    </p>
+                    <div className="bg-white p-8 rounded-lg border border-green-200">
+                      <H5PEmbed
+                        src="https://campus.rawdatun.org/h5p/embed.php?url=https%3A%2F%2Fcampus.rawdatun.org%2Fpluginfile.php%2F312%2Fmod_h5pactivity%2Fpackage%2F0%2Faddition-4.h5p&component=mod_h5pactivity"
+                        title="Arabic Interactive Content"
+                        height={500} />
+                    </div>
+                  </div>
+                </motion.div>
+              </TabsContent>
+            </Tabs>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Admission Form Section with Google Form */}
+      <motion.section
+        id="admission"
+        className="w-full py-12 md:py-24 lg:py-32 bg-green-50"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Apply for Admission</h2>
+              <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Join our online madrasa and begin your journey of Islamic learning. Fill out the form below to apply.
+              </p>
+            </div>
+          </div>
+          <motion.div className="mx-auto max-w-3xl py-12" variants={fadeIn}>
+            {/* Google Form Embed */}
+            <GoogleFormEmbed
+              formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeZnuTOEcXJDX4Fs0V9oZk0u7T3bWh8Wjqjz0dLudAdACHaGA/viewform?usp=sf_link"
+              title="Rawdatun Academy Admission Form"
+              height={800}
+              className="shadow-lg" />
+
+            {/* Additional information card */}
+            <Card className="mt-8 border-green-200 bg-white">
+              <CardHeader className="bg-green-50 border-b border-green-100">
+                <CardTitle className="text-primary">Application Process</CardTitle>
+                <CardDescription className="text-green-700">
+                  What happens after you submit your application
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
+                    <span className="text-primary font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-green-800">Application Review</h4>
+                    <p className="text-sm text-green-700">
+                      Our admissions team will review your application within 3-5 business days.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
+                    <span className="text-primary font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-green-800">Placement Assessment</h4>
+                    <p className="text-sm text-green-700">
+                      You'll be invited to a brief online assessment to determine your current knowledge level.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="bg-green-100 rounded-full w-6 h-6 flex items-center justify-center mt-0.5">
+                    <span className="text-primary font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-green-800">Enrollment Confirmation</h4>
+                    <p className="text-sm text-green-700">
+                      Upon acceptance, you'll receive enrollment details and access to our learning platform.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="bg-green-50 border-t border-green-100">
+                <p className="text-sm text-green-700">
+                  For any questions about the application process, please contact our admissions team at{" "}
+                  <a href="mailto:admissions@rawdatun.org" className="text-primary font-medium hover:underline">
+                    admissions@rawdatun.org
+                  </a>
+                </p>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        id="contact"
+        className="w-full py-12 md:py-24 lg:py-32 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Contact Us</h2>
+              <p className="max-w-[900px] text-green-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Have questions? We're here to help. Reach out to us through any of the following channels.
+              </p>
+            </div>
+          </div>
+          <motion.div className="mx-auto max-w-3xl py-12" variants={fadeIn}>
+            <Card className="border-green-200 hover:border-primary transition-colors duration-300 bg-white">
+              <CardHeader className="bg-green-50 border-b border-green-100">
+                <CardTitle className="text-primary">Get in Touch</CardTitle>
+                <CardDescription className="text-green-700">We'd love to hear from you</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6 pt-6">
+                <div className="flex items-start space-x-4">
+                  <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                  <div>
+                    <h3 className="font-medium text-green-800">Address</h3>
+                    <p className="text-sm text-green-700">Dhaka</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Clock className="h-5 w-5 text-primary mt-0.5" />
+                  <div>
+                    <h3 className="font-medium text-green-800">Office Hours</h3>
+                    <p className="text-sm text-green-700">Saturday - Thursday: 9:00 AM - 5:00 PM</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Users className="h-5 w-5 text-primary mt-0.5" />
+                  <div>
+                    <h3 className="font-medium text-green-800">Support</h3>
+                    <p className="text-sm text-green-700">Email: support@rawdatun.org</p>
+                    <p className="text-sm text-green-700">Phone: +8801676885195</p>
+                  </div>
+                </div>
+                <div className="pt-4">
+                  <h3 className="font-medium mb-2 text-green-800">Follow Us</h3>
+                  <div className="flex space-x-4">
+                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full border-green-300 text-primary hover:bg-green-50"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-4 w-4 text-primary"
+                        >
+                          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        <span className="sr-only">Facebook</span>
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full border-green-300 text-primary hover:bg-green-50"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-4 w-4 text-primary"
+                        >
+                          <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                        <span className="sr-only">Twitter</span>
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full border-green-300 text-primary hover:bg-green-50"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-4 w-4 text-primary"
+                        >
+                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                        <span className="sr-only">Instagram</span>
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="bg-green-50 border-t border-green-100">
+                <motion.div className="w-full" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Button className="w-full bg-primary hover:bg-green-700" asChild>
+                    <a href="mailto:support@rawdatun.org">Email Us</a>
+                  </Button>
+                </motion.div>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        </div>
+      </motion.section>
+    </main><footer className="w-full border-t bg-white border-green-100">
         <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
           <div className="flex items-center gap-2">
             <BookOpen className="h-6 w-6 text-primary" />
@@ -743,7 +772,7 @@ export default function Home() {
             </Link>
           </nav>
         </div>
-      </footer>
+      </footer></>
     </div>
   )
 }
