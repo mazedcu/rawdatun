@@ -45,7 +45,7 @@ const profiles = [
     name: "Mohammad Hasan Mazed",
     role: "Head of Academics",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "He has been working with different English medium institutions and preparing O and A level students for exam.",
+    bio: "He has been working with different English medium institutions and preparing O and A level students for final exam.",
   },
   {
     id: 3,
@@ -222,12 +222,11 @@ export default function Home() {
                 >
                   <GraduationCap className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold text-primary">
-                    Online Madrasah supporting anyone from homeschooling and even school going children to complement
-                    their studies.
+                    Online Academy supporting homeschooling and even school going children.
                   </h3>
                   <p className="card-description text-green-700">
                     We offer fully online studies for children so that students from around the globe can study at the
-                    comfort of their home. This platform is also suitable for homeschooling parents to fully support
+                    comfort of their home. It is also suitable for homeschooling parents to fully support
                     their needs and also can help school going children to compensate for any learning gap.
                   </p>
                 </motion.div>
